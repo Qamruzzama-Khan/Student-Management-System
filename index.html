@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="student-form">
+        <div class="form-group">
+            <label for="sr-no">Sr.No</label>
+            <input type="number" id="sr-no">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="faculty">Faculty</label>
+            <input type="text" id="faculty">
+        </div>
+        <div class="form-group">
+            <label for="rollNO">Roll No</label>
+            <input type="number" id="rollNO">
+        </div>
+        <button type="submit" id="add-btn">Add</button>
+    </form>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Student Name</th>
+                    <th>Faculty</th>
+                    <th>Roll No</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
