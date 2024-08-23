@@ -34,16 +34,17 @@ form {
 }
 
 /* Button styles */
-button {
+#add-btn {
     padding: 10px 15px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 18px;
 }
 
-button:hover {
+#add-btn:hover {
     background-color: #218838;
 }
 
@@ -71,6 +72,39 @@ tbody td {
     border-bottom: 1px solid #ddd;
 }
 
+/* Edit button styles */
+#edit-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#edit-btn:hover {
+    background-color: #218838;
+}
+
+/* Delete button styles */
+#delete-btn {
+    background-color: #dc3545; 
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#delete-btn:hover {
+    background-color: #c82333;
+}
+
+
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
@@ -88,7 +122,7 @@ tr:nth-child(even) {
         margin-bottom: 3px;
     }
 
-    button {
+    #add-btn {
         width: 100%;
         padding: 12px;
     }

@@ -37,7 +37,7 @@ function saveStudent() {
 
 // Function to create a table row for a student
 function createStudent(srNum, name, faculty, rollNo) {
-    const tRow = document.createElement('tr'); // Create a new table row
+    const tr = document.createElement('tr'); // Create a new table row
 
     // Create and append table cells with student data
     const td1 = document.createElement('td');
@@ -49,13 +49,35 @@ function createStudent(srNum, name, faculty, rollNo) {
     const td4 = document.createElement('td');
     td4.textContent = rollNo; // Set roll number
 
-    // Append cells to the table row
-    tRow.appendChild(td1);
-    tRow.appendChild(td2);
-    tRow.appendChild(td3);
-    tRow.appendChild(td4);
+    const editBtn = document.createElement('button');
+    editBtn.id = 'edit-btn';
+    editBtn.textContent = 'Edit';
+    editBtn.addEventListener('click', () => {
+         srNo.value = tr.querySelector('td:nth-of-type(1)').textContent;
+         studName.value = tr.querySelector('td:nth-of-type(2)').textContent;
+         studFaculty.value = tr.querySelector('td:nth-of-type(3)').textContent;
+         studRollNo.value = tr.querySelector('td:nth-of-type(4)').textContent;
 
-    return tRow; // Return the completed table row
+         tBody.removeChild(tr);
+    })
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.id = 'delete-btn';
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.addEventListener('click', () => {
+        tBody.removeChild(tr);
+        saveStudent();
+    })
+
+    // Append cells to the table row
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    tr.appendChild(editBtn);
+    tr.appendChild(deleteBtn);
+
+    return tr; // Return the completed table row
 }
 
 // Add event listener to the 'Add' button
